@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="10">
+
+            <HorizontalStackLayout
+                Spacing = "100"
+                HorizontalOptions = "Start">
+
+                <Label
+                    Text = "Conta"/>
+
+                <Entry
+                    x:Name = "EntryAmount"
+                    Placeholder = "Digite aqui o valor da conta"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing = "260"
+                HorizontalOptions = "Start">
+                
+                <Label
+                    Text = "Gorjeta"/>
+                
+                <Label
+                    x:Name = "TipLabel"
+                    Text = "0.00"/>
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing = "275"
+                HorizontalOptions = "Start">
+
+                <Label
+                    Text = "Total"/>
+
+                <Label
+                    x:Name = "TotalLabel"
+                    Text = "0.00"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                    Spacing = "150"
+                    HorizontalOptions = "Start">
+
+                    <Label
+                        Text = "Porcentagem da Gorjeta"/>
+
+                    <Label
+                        Text = "15%"/>
+
+                </HorizontalStackLayout>
+
+                <Slider
+                    x:Name = "TipSlider"
+                    Minimum = "0"
+                    Maximum = "50"
+                    Value = "20"/>
+
+            <HorizontalStackLayout
+                HorizontalOptions = "Center">
+                
+                <Button
+                    x:Name = "SetLowTipButton"
+                    Text = "15%"
+                    Clicked = "SetLowTipButton_Clicked"
+                    WidthRequest = "250"/>
+
+                <Button
+                    x:Name = "SetHighTipButton"
+                    Text = "20%"
+                    Clicked = "SetHighTipButton_Clicked"
+                    WidthRequest = "250"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+
+                <Button
+                    x:Name = "ButtonRoundDown"
+                    Text = "Arredondar para Baixo"
+                    Clicked = "ButtonRoundDown_Clicked"
+                    WidthRequest = "250"/>
+
+                <Button
+                    x:Name = "ButtonRoundUp"
+                    Text = "Arredondar para Cima"
+                    Clicked = "ButtonRoundUp_Clicked"
+                    WidthRequest = "250"/>
+
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
