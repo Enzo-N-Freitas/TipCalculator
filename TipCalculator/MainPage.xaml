@@ -17,21 +17,22 @@
 
                 <Entry
                     x:Name = "EntryAmount"
-                    Placeholder = "Digite aqui o valor da conta"/>
+                    Placeholder = "Digite aqui o valor da conta"
+                    TextChanged = "EntryAmount_TextChanged"/>
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout
                 Spacing = "260"
                 HorizontalOptions = "Start">
-                
+
                 <Label
                     Text = "Gorjeta"/>
-                
+
                 <Label
                     x:Name = "TipLabel"
-                    Text = "0.00"/>
-                
+                    Text = "R$ 0.00"/>
+
             </HorizontalStackLayout>
 
             <HorizontalStackLayout
@@ -43,58 +44,63 @@
 
                 <Label
                     x:Name = "TotalLabel"
-                    Text = "0.00"/>
+                    Text = "R$ 0.00"/>
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout
-                    Spacing = "150"
-                    HorizontalOptions = "Start">
+                Spacing = "150"
+                HorizontalOptions = "Start">
 
-                    <Label
-                        Text = "Porcentagem da Gorjeta"/>
+                <Label
+                    Text = "Porcentagem da Gorjeta"/>
 
-                    <Label
-                        Text = "15%"/>
+                <Label
+                    x:Name = "LabelPercent"
+                    Text = "15%"/>
 
-                </HorizontalStackLayout>
+            </HorizontalStackLayout>
 
-                <Slider
-                    x:Name = "TipSlider"
-                    Minimum = "0"
-                    Maximum = "50"
-                    Value = "20"/>
+            <Slider
+                x:Name = "TipSlider"
+                Minimum = "0"
+                Maximum = "50"
+                Value = "15"
+                ValueChanged = "TipSlider_ValueChanged"/>
 
             <HorizontalStackLayout
-                HorizontalOptions = "Center">
+                HorizontalOptions = "Center"
+                Spacing = "10">
                 
                 <Button
                     x:Name = "SetLowTipButton"
                     Text = "15%"
                     Clicked = "SetLowTipButton_Clicked"
-                    WidthRequest = "250"/>
+                    WidthRequest = "300"/>
 
                 <Button
                     x:Name = "SetHighTipButton"
                     Text = "20%"
                     Clicked = "SetHighTipButton_Clicked"
-                    WidthRequest = "250"/>
+                    WidthRequest = "300"/>
 
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions = "Center"
+                Spacing = "10">
 
                 <Button
                     x:Name = "ButtonRoundDown"
                     Text = "Arredondar para Baixo"
                     Clicked = "ButtonRoundDown_Clicked"
-                    WidthRequest = "250"/>
+                    WidthRequest = "300"/>
 
                 <Button
                     x:Name = "ButtonRoundUp"
                     Text = "Arredondar para Cima"
                     Clicked = "ButtonRoundUp_Clicked"
-                    WidthRequest = "250"/>
+                    WidthRequest = "300"/>
 
             </HorizontalStackLayout>
 
