@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.AboutPage"
+             Title="AboutPage">
+    
+    <VerticalStackLayout
+        Spacing = "10"
+        HorizontalOptions = "Center">
+        
+        <Label 
+            Text = "Projeto criado por Enzo Negrão Freitas" 
+            HorizontalOptions = "Center"/>
+
+        <Label 
+            Text = "Programação de Aplicativos Mobile - Desenvolvimento de Sistemas" 
+            HorizontalOptions = "Center"/>
+
+        <Label 
+            Text = "ETEC Horácio Augusto da Silveira" 
+            HorizontalOptions = "Center"/>
+
+        <Button 
+            Text = "Clique aqui para acessar meu Github!"
+            Clicked = "AboutButton_Clicked"
+            WidthRequest = "500"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

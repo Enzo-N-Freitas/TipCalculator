@@ -9,8 +9,8 @@
             Spacing="10">
 
             <HorizontalStackLayout
-                Spacing = "100"
-                HorizontalOptions = "Start">
+                Spacing = "120"
+                HorizontalOptions = "Center">
 
                 <Label
                     Text = "Conta"/>
@@ -18,13 +18,14 @@
                 <Entry
                     x:Name = "EntryAmount"
                     Placeholder = "Digite aqui o valor da conta"
-                    TextChanged = "EntryAmount_TextChanged"/>
+                    TextChanged = "EntryAmount_TextChanged"
+                    Keyboard = "Numeric"/>
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout
                 Spacing = "260"
-                HorizontalOptions = "Start">
+                HorizontalOptions = "Center">
 
                 <Label
                     Text = "Gorjeta"/>
@@ -37,7 +38,7 @@
 
             <HorizontalStackLayout
                 Spacing = "275"
-                HorizontalOptions = "Start">
+                HorizontalOptions = "Center">
 
                 <Label
                     Text = "Total"/>
@@ -49,8 +50,8 @@
             </HorizontalStackLayout>
 
             <HorizontalStackLayout
-                Spacing = "150"
-                HorizontalOptions = "Start">
+                Spacing = "170"
+                HorizontalOptions = "Center">
 
                 <Label
                     Text = "Porcentagem da Gorjeta"/>
@@ -61,12 +62,18 @@
 
             </HorizontalStackLayout>
 
+            <HorizontalStackLayout
+                HorizontalOptions = "Center">
+                
             <Slider
                 x:Name = "TipSlider"
                 Minimum = "0"
                 Maximum = "50"
                 Value = "15"
-                ValueChanged = "TipSlider_ValueChanged"/>
+                ValueChanged = "TipSlider_ValueChanged"
+                WidthRequest = "500"/>
+
+            </HorizontalStackLayout>
 
             <HorizontalStackLayout
                 HorizontalOptions = "Center"

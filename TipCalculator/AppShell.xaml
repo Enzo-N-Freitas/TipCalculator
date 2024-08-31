@@ -7,9 +7,18 @@
     Shell.FlyoutBehavior="Disabled"
     Title="TipCalculator">
 
-    <ShellContent
-        Title="Calculadora de Gorjetas"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        
+        <ShellContent
+            Title="Calculadora de Gorjetas"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Sobre Mim"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="AboutPage" />
+    
+    </TabBar>
 
 </Shell>

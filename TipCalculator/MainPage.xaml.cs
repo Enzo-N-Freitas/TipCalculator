@@ -1,4 +1,6 @@
-﻿namespace TipCalculator
+﻿using System.Diagnostics;
+
+namespace TipCalculator
 {
     public partial class MainPage : ContentPage
     {
@@ -21,15 +23,21 @@
 
         private void ButtonRoundDown_Clicked(object sender, EventArgs e)
         {
-            
+            Tip = Math.Floor(Tip);
+            Total = Bill + Tip;
+            TipLabel.Text = Tip.ToString("C");
+            TotalLabel.Text = Total.ToString("C");
         }
 
         private void ButtonRoundUp_Clicked(object sender, EventArgs e)
         {
-           
+            Tip = Math.Ceiling(Tip);
+            Total = Bill + Tip;
+            TipLabel.Text = Tip.ToString("C");
+            TotalLabel.Text = Total.ToString("C");                                                                                                                                                                                                              
         }
 
-        private void TipSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void TipSlider_ValueChanged(object sender, ValueChangedEventArgs e) 
         {
             LabelPercent.Text = TipSlider.Value.ToString("#.##") + "%";
             TipPercent = TipSlider.Value / 100;
@@ -41,11 +49,19 @@
 
         private void EntryAmount_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Bill = float.Parse(EntryAmount.Text);
-            Tip = Bill * TipPercent;
-            Total = Bill + Tip;
-            TipLabel.Text = Tip.ToString("C");
-            TotalLabel.Text = Total.ToString("C");
+            try 
+            { 
+                Bill = float.Parse(EntryAmount.Text);
+                Tip = Bill * TipPercent;
+                Total = Bill + Tip;
+                TipLabel.Text = Tip.ToString("C");
+                TotalLabel.Text = Total.ToString("C");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+
+            }
         }
     }
 
